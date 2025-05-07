@@ -17,7 +17,7 @@ namespace Conexao_SQL
 
         MySqlConnection Conexao;
 
-        public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
+        public string data_source = "datasource=LOCALHOST;username=root;password=1111;database=Atividade_Conexao";
 
         public List<string> dadosCategoria = new List<string>(); // usado para inicializar a lista aqui que receberá as categorias
         //public int ?id_produto_selecionado = null; EXCLUIR

@@ -16,7 +16,7 @@ namespace Conexao_SQL
         MySqlConnection Conexao;
 
         public int IdUsuario = 1;
-        public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
+        public string data_source = "datasource=LOCALHOST;username=root;password=1111;database=Atividade_Conexao";
 
         public CadastrarUsuario()
         {

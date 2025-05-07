@@ -53,7 +53,7 @@
             this.cbxUnidadeControle = new System.Windows.Forms.ComboBox();
             this.cbxCategoriaProduto = new System.Windows.Forms.ComboBox();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblVerificacao = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -67,9 +67,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstVisualizar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lstVisualizar.HideSelection = false;
-            this.lstVisualizar.Location = new System.Drawing.Point(289, 52);
+            this.lstVisualizar.Location = new System.Drawing.Point(285, 59);
             this.lstVisualizar.Name = "lstVisualizar";
-            this.lstVisualizar.Size = new System.Drawing.Size(503, 752);
+            this.lstVisualizar.Size = new System.Drawing.Size(503, 697);
             this.lstVisualizar.TabIndex = 2;
             this.lstVisualizar.UseCompatibleStateImageBehavior = false;
             this.lstVisualizar.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstVisualizar_ItemSelectionChanged);
@@ -80,7 +80,7 @@
             this.btnFiltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(44)))));
             this.btnFiltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFiltar.Location = new System.Drawing.Point(573, 12);
+            this.btnFiltar.Location = new System.Drawing.Point(561, 12);
             this.btnFiltar.Name = "btnFiltar";
             this.btnFiltar.Size = new System.Drawing.Size(95, 28);
             this.btnFiltar.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.txtFiltrar.Location = new System.Drawing.Point(291, 14);
             this.txtFiltrar.Multiline = true;
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(276, 23);
+            this.txtFiltrar.Size = new System.Drawing.Size(264, 23);
             this.txtFiltrar.TabIndex = 0;
             // 
             // btnAtualizar
@@ -170,7 +170,7 @@
             this.groupBox1.Controls.Add(this.txtNomeProduto);
             this.groupBox1.Location = new System.Drawing.Point(-2, -10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(285, 814);
+            this.groupBox1.Size = new System.Drawing.Size(285, 759);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -348,21 +348,25 @@
             this.txtNomeProduto.Size = new System.Drawing.Size(240, 20);
             this.txtNomeProduto.TabIndex = 3;
             // 
-            // label3
+            // lblVerificacao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(696, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Administrador";
+            this.lblVerificacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVerificacao.AutoSize = true;
+            this.lblVerificacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerificacao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblVerificacao.Location = new System.Drawing.Point(670, 36);
+            this.lblVerificacao.Name = "lblVerificacao";
+            this.lblVerificacao.Size = new System.Drawing.Size(111, 13);
+            this.lblVerificacao.TabIndex = 14;
+            this.lblVerificacao.Text = "ADMINISTRADOR";
+            this.lblVerificacao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(696, 3);
+            this.label10.Location = new System.Drawing.Point(680, 3);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 13);
             this.label10.TabIndex = 13;
@@ -370,21 +374,22 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(713, 19);
+            this.label11.Location = new System.Drawing.Point(659, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.Size = new System.Drawing.Size(139, 13);
             this.label11.TabIndex = 12;
-            this.label11.Text = "Matheus ";
+            this.label11.Text = "A TELA DE USUÁRIO :";
             // 
             // Visualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(73)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(800, 804);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(800, 749);
+            this.Controls.Add(this.lblVerificacao);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
@@ -430,7 +435,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblVerificacao;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
     }

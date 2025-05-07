@@ -15,14 +15,22 @@ namespace Conexao_SQL
     public partial class Visualizar : Form
     {
 
-        public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
+        public string data_source = "datasource=LOCALHOST;username=root;password=1111;database=Atividade_Conexao";
         MySqlConnection Conexao;
 
         public int? id_contato_selecionado = null;
+
+        //private string usuarioLogado; 
+
         public Visualizar(string tipoUsuario)
         {
             InitializeComponent();
             string usuarioLogado = tipoUsuario;
+            if (usuarioLogado == "Simples") 
+            {
+                lblVerificacao.Text = usuarioLogado.ToUpper();
+            }
+            //lblVerificacao.Text = usuarioLogado;
             lstVisualizar.View = View.Details;//exibe as linhas das colunas e linhas
             lstVisualizar.LabelEdit = true;
             lstVisualizar.AllowColumnReorder = true; //mexe na ordem das colunas
