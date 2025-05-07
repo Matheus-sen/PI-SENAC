@@ -15,7 +15,7 @@ namespace Conexao_SQL
     public partial class Visualizar : Form
     {
 
-        public string data_source = "datasource=LOCALHOST;username=root;password=1111;database=Atividade_Conexao";
+        public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
         MySqlConnection Conexao;
 
         public int? id_contato_selecionado = null;
@@ -176,7 +176,7 @@ namespace Conexao_SQL
 
 
                         MessageBox.Show(
-                                "Contato Excluido com Sucesso!",
+                                "Produto Excluido com Sucesso!",
                                 "Sucesso", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information
                                 );
@@ -321,7 +321,7 @@ namespace Conexao_SQL
 
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                    MessageBox.Show("Produto Atualizado com Sucesso", "Sucesso",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
 

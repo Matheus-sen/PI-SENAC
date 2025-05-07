@@ -14,7 +14,7 @@ namespace Conexao_SQL
     public partial class cadastrarProduto: Form
     {
         public int IdProduto = 1;
-        public string data_source = "datasource=LOCALHOST;username=root;password=1111;database=Atividade_Conexao";
+        public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
         MySqlConnection Conexao;
         public cadastrarProduto()
         {
