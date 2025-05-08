@@ -40,9 +40,11 @@
             this.lblId = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lstUsuario = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +65,7 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSenha.Location = new System.Drawing.Point(25, 187);
+            this.lblSenha.Location = new System.Drawing.Point(25, 182);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(51, 12);
             this.lblSenha.TabIndex = 1;
@@ -71,7 +73,7 @@
             // 
             // txtSenhaNova
             // 
-            this.txtSenhaNova.Location = new System.Drawing.Point(28, 203);
+            this.txtSenhaNova.Location = new System.Drawing.Point(28, 198);
             this.txtSenhaNova.Name = "txtSenhaNova";
             this.txtSenhaNova.Size = new System.Drawing.Size(193, 20);
             this.txtSenhaNova.TabIndex = 1;
@@ -90,7 +92,7 @@
             this.cbxTipoUsuario.Items.AddRange(new object[] {
             "Administrador",
             "Simples"});
-            this.cbxTipoUsuario.Location = new System.Drawing.Point(28, 288);
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(28, 281);
             this.cbxTipoUsuario.Name = "cbxTipoUsuario";
             this.cbxTipoUsuario.Size = new System.Drawing.Size(193, 21);
             this.cbxTipoUsuario.TabIndex = 2;
@@ -100,7 +102,7 @@
             this.lblTipoUsuario.AutoSize = true;
             this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(25, 272);
+            this.lblTipoUsuario.Location = new System.Drawing.Point(25, 265);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
             this.lblTipoUsuario.Size = new System.Drawing.Size(110, 12);
             this.lblTipoUsuario.TabIndex = 5;
@@ -112,7 +114,7 @@
             this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(288, 273);
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(103, 320);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
             this.btnCadastrarUsuario.Size = new System.Drawing.Size(118, 32);
             this.btnCadastrarUsuario.TabIndex = 3;
@@ -147,9 +149,9 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoltar.Location = new System.Drawing.Point(307, 323);
+            this.btnVoltar.Location = new System.Drawing.Point(27, 358);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(78, 32);
+            this.btnVoltar.Size = new System.Drawing.Size(194, 32);
             this.btnVoltar.TabIndex = 4;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -158,10 +160,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.cbxTipoUsuario);
             this.groupBox1.Controls.Add(this.lblTipoUsuario);
             this.groupBox1.Controls.Add(this.lblId);
+            this.groupBox1.Controls.Add(this.btnVoltar);
             this.groupBox1.Controls.Add(this.txtSenhaNova);
+            this.groupBox1.Controls.Add(this.btnCadastrarUsuario);
             this.groupBox1.Controls.Add(this.txtIdUsuarioCadastrado);
             this.groupBox1.Controls.Add(this.lblSenha);
             this.groupBox1.Controls.Add(this.txtUserNovo);
@@ -172,10 +177,20 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(27, 320);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(70, 32);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(293, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(293, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(98, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +203,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(284, 201);
+            this.label8.Location = new System.Drawing.Point(284, 146);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 26);
@@ -200,11 +215,21 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(272, 173);
+            this.label9.Location = new System.Drawing.Point(272, 118);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 32);
             this.label9.TabIndex = 11;
             this.label9.Text = "VERSAT";
+            // 
+            // lstUsuario
+            // 
+            this.lstUsuario.HideSelection = false;
+            this.lstUsuario.Location = new System.Drawing.Point(261, 190);
+            this.lstUsuario.Name = "lstUsuario";
+            this.lstUsuario.Size = new System.Drawing.Size(167, 185);
+            this.lstUsuario.TabIndex = 14;
+            this.lstUsuario.UseCompatibleStateImageBehavior = false;
+            this.lstUsuario.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // CadastrarUsuario
             // 
@@ -212,12 +237,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(73)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(434, 384);
+            this.Controls.Add(this.lstUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.btnCadastrarUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarUsuario";
@@ -248,5 +272,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.ListView lstUsuario;
     }
 }

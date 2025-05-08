@@ -17,11 +17,28 @@ namespace Conexao_SQL
 
         public int IdUsuario = 1;
         public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
+        public int? id_usuario_selecionado = null;
 
         public CadastrarUsuario()
         {
             InitializeComponent();
             CarregarProximoIdBancoUsuario();
+
+            lstVisualizar.View = View.Details;//exibe as linhas das colunas e linhas
+            lstVisualizar.LabelEdit = true;
+            lstVisualizar.AllowColumnReorder = true; //mexe na ordem das colunas
+            lstVisualizar.FullRowSelect = true; //selecionar linha completa
+            lstVisualizar.GridLines = true;
+
+
+            lstVisualizar.Columns.Add("ID Produto", 65, HorizontalAlignment.Left);
+            lstVisualizar.Columns.Add("Produto", 250, HorizontalAlignment.Left);
+            lstVisualizar.Columns.Add("Categoria", 200, HorizontalAlignment.Left);
+            lstVisualizar.Columns.Add("Valor", 85, HorizontalAlignment.Left);
+            lstVisualizar.Columns.Add("Un.Medida", 65, HorizontalAlignment.Left);
+            lstVisualizar.Columns.Add("Localização", 200, HorizontalAlignment.Left);
+            lstVisualizar.Columns.Add("Descrição", 450, HorizontalAlignment.Left);
+            carregar_contatos();
         }
 
         private void Limpar()
@@ -144,6 +161,92 @@ namespace Conexao_SQL
                 Conexao.Close();
             }
         }
+
+
+
+        private void ExcluirUsuário()
+        {
+            if (id_contato_selecionado != null)
+            {
+                try
+                {
+
+                    DialogResult conf = MessageBox.Show("Deseja Excluir o Registro de ID " + id_contato_selecionado + " ?",
+                                                        "Certeza ?",
+                                                           MessageBoxButtons.YesNo,
+                                                           MessageBoxIcon.Warning);
+
+                    if (conf == DialogResult.Yes)
+                    {
+
+
+                        Conexao = new MySqlConnection(data_source);
+                        Conexao.Open();
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.Connection = Conexao;
+
+                        cmd.Connection = Conexao;
+                        cmd.CommandText = "DELETE FROM produto WHERE id_produto=@id_produto";
+                        cmd.Parameters.AddWithValue("@id_produto", id_contato_selecionado);
+
+                        cmd.ExecuteNonQuery();
+
+
+                        MessageBox.Show(
+                                "Produto Excluido com Sucesso!",
+                                "Sucesso", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                                );
+
+
+                        carregar_contatos();
+
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Erro " + ex.Number + "Ocorreu: " + ex.Message,
+                        "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Ocorreu: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                finally
+                {
+                    Conexao.Close();
+                }
+            }
+            else
+            {
+                Erro($"Nenhum item/ produto foi selecionado, selecione um item para excluir!");
+            }
+
+        }
+
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection itens_selecionados = lstVisualizar.SelectedItems;
+
+            // percorrendo a coleção de itens dentro da lista itens_selecionados
+            // Obs¹: A minha linha toda é um item, que contem os subItems (colunas) que desejo selecionar
+
+            foreach (ListViewItem item in itens_selecionados)
+            {
+                id_produto_selecionado = Convert.ToInt32(item.SubItems[0].Text);
+                CarregarDetalhesProduto((int)id_produto_selecionado); // Chama o método para carregar os detalhes
+            }
+        }
+    }
     }
 }
 

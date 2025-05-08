@@ -18,9 +18,7 @@ namespace Conexao_SQL
         public string data_source = "datasource=LOCALHOST;username=root;password=;database=Atividade_Conexao";
         MySqlConnection Conexao;
 
-        public int? id_contato_selecionado = null;
-
-        //private string usuarioLogado; 
+        public int? id_produto_selecionado = null;
 
         public Visualizar(string tipoUsuario)
         {
@@ -31,7 +29,7 @@ namespace Conexao_SQL
                 lblVerificacao.Text = usuarioLogado.ToUpper();
                 lblVerificacao.ForeColor = Color.Green;
             }
-            //lblVerificacao.Text = usuarioLogado;
+
             lstVisualizar.View = View.Details;//exibe as linhas das colunas e linhas
             lstVisualizar.LabelEdit = true;
             lstVisualizar.AllowColumnReorder = true; //mexe na ordem das colunas
@@ -144,20 +142,20 @@ namespace Conexao_SQL
 
             foreach (ListViewItem item in itens_selecionados)
             {
-                id_contato_selecionado = Convert.ToInt32(item.SubItems[0].Text);
-                CarregarDetalhesProduto((int)id_contato_selecionado); // Chama o método para carregar os detalhes
+                id_produto_selecionado = Convert.ToInt32(item.SubItems[0].Text);
+                CarregarDetalhesProduto((int)id_produto_selecionado); // Chama o método para carregar os detalhes
             }
 
         }
 
         private void excluir_contato()
         {
-            if (id_contato_selecionado != null)
+            if (id_produto_selecionado != null)
             {
                 try
                 {
 
-                    DialogResult conf = MessageBox.Show("Deseja Excluir o Registro de ID " + id_contato_selecionado + " ?",
+                    DialogResult conf = MessageBox.Show("Deseja Excluir o Registro de ID " + id_produto_selecionado + " ?",
                                                         "Certeza ?",
                                                            MessageBoxButtons.YesNo,
                                                            MessageBoxIcon.Warning);
@@ -173,7 +171,7 @@ namespace Conexao_SQL
 
                         cmd.Connection = Conexao;
                         cmd.CommandText = "DELETE FROM produto WHERE id_produto=@id_produto";
-                        cmd.Parameters.AddWithValue("@id_produto", id_contato_selecionado);
+                        cmd.Parameters.AddWithValue("@id_produto", id_produto_selecionado);
 
                         cmd.ExecuteNonQuery();
 
@@ -300,7 +298,7 @@ namespace Conexao_SQL
                 string nomeCategoriaSelecionada = cbxCategoriaProduto.SelectedItem?.ToString();
 
 
-                if (id_contato_selecionado != null)
+                if (id_produto_selecionado != null)
                 {
                     // Busca o ID da categoria com base no nome selecionado no ComboBox
                     string selectIdCategoria = "SELECT id_categoria FROM categoria WHERE nome_categoria = @nome_categoria";
@@ -314,7 +312,7 @@ namespace Conexao_SQL
                         "SET nome_produto = @nome_produto, id_categoria = @id_categoria, valor = @valor, unidade_controle = @unidade_controle, localizacao = @localizacao, descricao = @descricao WHERE id_produto = @id_produto";
 
 
-                    cmd.Parameters.AddWithValue("@id_produto", id_contato_selecionado);
+                    cmd.Parameters.AddWithValue("@id_produto", id_produto_selecionado);
                     cmd.Parameters.AddWithValue("@nome_produto", txtNomeProduto.Text);
                     cmd.Parameters.AddWithValue("@id_categoria", Convert.ToInt32(categoriaIdResult));
                     cmd.Parameters.AddWithValue("@valor", txtValor.Text);
