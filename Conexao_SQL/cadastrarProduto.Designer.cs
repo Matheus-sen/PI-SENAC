@@ -86,6 +86,7 @@
             // 
             // cbxCategoriaProduto
             // 
+            this.cbxCategoriaProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoriaProduto.FormattingEnabled = true;
             this.cbxCategoriaProduto.Location = new System.Drawing.Point(24, 142);
             this.cbxCategoriaProduto.Name = "cbxCategoriaProduto";
@@ -231,11 +232,13 @@
             // 
             // cbxUnidadeControle
             // 
+            this.cbxUnidadeControle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxUnidadeControle.FormattingEnabled = true;
             this.cbxUnidadeControle.Items.AddRange(new object[] {
             "Un.",
             "Cx.",
             "Pct.",
+            "Kg",
             "Lts.",
             "Mts.",
             "Br.",

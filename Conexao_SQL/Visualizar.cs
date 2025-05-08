@@ -29,6 +29,7 @@ namespace Conexao_SQL
             if (usuarioLogado == "Simples") 
             {
                 lblVerificacao.Text = usuarioLogado.ToUpper();
+                lblVerificacao.ForeColor = Color.Green;
             }
             //lblVerificacao.Text = usuarioLogado;
             lstVisualizar.View = View.Details;//exibe as linhas das colunas e linhas
@@ -52,6 +53,8 @@ namespace Conexao_SQL
             {
                 btnExcluir.Visible = false;
                 btnAtualizar.Visible = false;
+                btnSair.Location = new System.Drawing.Point(27, 380);
+
             }
             else 
             {

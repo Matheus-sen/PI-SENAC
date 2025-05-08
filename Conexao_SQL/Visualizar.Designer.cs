@@ -33,7 +33,7 @@
             this.btnFiltar = new System.Windows.Forms.Button();
             this.txtFiltrar = new System.Windows.Forms.TextBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.txtSair = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,7 +55,6 @@
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.lblVerificacao = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,11 +79,13 @@
             this.btnFiltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(44)))));
             this.btnFiltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFiltar.Location = new System.Drawing.Point(561, 12);
+            this.btnFiltar.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltar.Image")));
+            this.btnFiltar.Location = new System.Drawing.Point(693, 14);
             this.btnFiltar.Name = "btnFiltar";
             this.btnFiltar.Size = new System.Drawing.Size(95, 28);
             this.btnFiltar.TabIndex = 1;
             this.btnFiltar.Text = "Filtrar";
+            this.btnFiltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFiltar.UseVisualStyleBackColor = false;
             this.btnFiltar.Click += new System.EventHandler(this.btnFiltar_Click);
             // 
@@ -92,10 +93,10 @@
             // 
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.Location = new System.Drawing.Point(291, 14);
+            this.txtFiltrar.Location = new System.Drawing.Point(413, 16);
             this.txtFiltrar.Multiline = true;
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(264, 23);
+            this.txtFiltrar.Size = new System.Drawing.Size(274, 23);
             this.txtFiltrar.TabIndex = 0;
             // 
             // btnAtualizar
@@ -113,19 +114,19 @@
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // txtSair
+            // btnSair
             // 
-            this.txtSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(44)))));
-            this.txtSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSair.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtSair.Location = new System.Drawing.Point(22, 433);
-            this.txtSair.Name = "txtSair";
-            this.txtSair.Size = new System.Drawing.Size(242, 36);
-            this.txtSair.TabIndex = 11;
-            this.txtSair.Text = " Voltar";
-            this.txtSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.txtSair.UseVisualStyleBackColor = false;
-            this.txtSair.Click += new System.EventHandler(this.txtSair_Click);
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(44)))));
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSair.Location = new System.Drawing.Point(22, 433);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(242, 36);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.Text = " Voltar";
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.txtSair_Click);
             // 
             // btnExcluir
             // 
@@ -148,11 +149,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(36)))), ((int)(((byte)(56)))));
+            this.groupBox1.Controls.Add(this.lblVerificacao);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtSair);
+            this.groupBox1.Controls.Add(this.btnSair);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
@@ -190,7 +191,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(62, 19);
+            this.label8.Location = new System.Drawing.Point(333, 14);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 25);
@@ -202,7 +203,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(25, 19);
+            this.label9.Location = new System.Drawing.Point(296, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 25);
             this.label9.TabIndex = 14;
@@ -319,6 +320,7 @@
             // 
             // cbxUnidadeControle
             // 
+            this.cbxUnidadeControle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxUnidadeControle.FormattingEnabled = true;
             this.cbxUnidadeControle.Items.AddRange(new object[] {
             "Un.",
@@ -335,6 +337,7 @@
             // 
             // cbxCategoriaProduto
             // 
+            this.cbxCategoriaProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoriaProduto.FormattingEnabled = true;
             this.cbxCategoriaProduto.Location = new System.Drawing.Point(24, 118);
             this.cbxCategoriaProduto.Name = "cbxCategoriaProduto";
@@ -353,8 +356,8 @@
             this.lblVerificacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVerificacao.AutoSize = true;
             this.lblVerificacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerificacao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblVerificacao.Location = new System.Drawing.Point(670, 36);
+            this.lblVerificacao.ForeColor = System.Drawing.Color.Green;
+            this.lblVerificacao.Location = new System.Drawing.Point(69, 33);
             this.lblVerificacao.Name = "lblVerificacao";
             this.lblVerificacao.Size = new System.Drawing.Size(111, 13);
             this.lblVerificacao.TabIndex = 14;
@@ -366,22 +369,12 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(680, 3);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(21, 33);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 13);
+            this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 13;
-            this.label10.Text = "BEM VINDO(A)";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(659, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "A TELA DE USUÁRIO :";
+            this.label10.Text = "USER :";
             // 
             // Visualizar
             // 
@@ -389,9 +382,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(73)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(800, 749);
-            this.Controls.Add(this.lblVerificacao);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.btnFiltar);
@@ -415,7 +407,7 @@
         private System.Windows.Forms.Button btnFiltar;
         private System.Windows.Forms.TextBox txtFiltrar;
         private System.Windows.Forms.Button btnAtualizar;
-        private System.Windows.Forms.Button txtSair;
+        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -437,6 +429,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblVerificacao;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
     }
 }

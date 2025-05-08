@@ -85,6 +85,7 @@
             // 
             // cbxTipoUsuario
             // 
+            this.cbxTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoUsuario.FormattingEnabled = true;
             this.cbxTipoUsuario.Items.AddRange(new object[] {
             "Administrador",
@@ -218,6 +219,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrarUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarUsuário";

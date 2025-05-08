@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnFiltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEkSURBVDhP1ZIvS0NRGIevhuGcIGIZswnLC6Z9A+uCwbBi
+        WFnfDAoyGAy2vLamxQ9gmsVgMQzR5la0GUSDIBqOz3v5MQbn3rkTBH3ggfP+5W7nRP8H59wybgS6pHEf
+        ikMM5UzjPhSfsYk7C9rBe437UBzjgcIfofcYbxT6UBxYA64qlQo9W/iEbaV8KG7iBK9wXWkPaiV8VF9O
+        6WRoyOMt3mFB6SnkdvENzzGr9HxotOdwjfa120pbvoafaJeR/lySYGANL9F+WgEr+IH7agmH4RV8xT2s
+        Y/oTWRSW2Nv8lYVHsws5F3UMQwsv8Aubyh2i0YubQmDIFtplVBXbMrvpFr5j2FIGTrCscwONU7S/oR9H
+        znXj5lAYHOFLgg+YUdufJ4q+ASrsxpI0MFw3AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnAtualizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
