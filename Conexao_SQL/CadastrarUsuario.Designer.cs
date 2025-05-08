@@ -45,6 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lstUsuario = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -179,18 +180,22 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(71)))), ((int)(((byte)(44)))));
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnExcluir.Location = new System.Drawing.Point(27, 320);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(70, 32);
             this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(293, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(293, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(98, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,12 +206,12 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(284, 146);
+            this.label8.Location = new System.Drawing.Point(284, 137);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 26);
+            this.label8.Size = new System.Drawing.Size(86, 29);
             this.label8.TabIndex = 12;
             this.label8.Text = "control";
             // 
@@ -215,7 +220,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(272, 118);
+            this.label9.Location = new System.Drawing.Point(272, 109);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 32);
             this.label9.TabIndex = 11;
@@ -226,10 +231,22 @@
             this.lstUsuario.HideSelection = false;
             this.lstUsuario.Location = new System.Drawing.Point(261, 190);
             this.lstUsuario.Name = "lstUsuario";
-            this.lstUsuario.Size = new System.Drawing.Size(167, 185);
+            this.lstUsuario.Size = new System.Drawing.Size(166, 185);
             this.lstUsuario.TabIndex = 14;
             this.lstUsuario.UseCompatibleStateImageBehavior = false;
             this.lstUsuario.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(262, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(164, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = " USUÁRIOS CADASTRADOS:";
             // 
             // CadastrarUsuario
             // 
@@ -237,6 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(73)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(434, 384);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lstUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
@@ -274,5 +292,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ListView lstUsuario;
+        private System.Windows.Forms.Label label1;
     }
 }
