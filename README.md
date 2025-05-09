@@ -10,9 +10,9 @@ Para entendermos melhor sobre como abrir e rodar o sistema, segue o passo-a-pass
 Lembre-se, o projeto trata-se de um sistema versátil de controle/ gestão de estoque, use-o de acordo a sua necessidade...
 
 Membros do Grupo:
-Matheus de Souza Matos
-Antonio Romeu Miguel dos Santos Neto
-Lucas da Silva Camilo
+Matheus de Souza Matos - https://github.com/Matheus-sen
+Antonio Romeu Miguel dos Santos Neto - https://github.com/antonio87979
+Lucas da Silva Camilo - https://github.com/lucascnd2561
 
 Turma Senac - N01 - Senac Largo Treze
 
@@ -22,8 +22,3 @@ Turma Senac - N01 - Senac Largo Treze
 #senac
 #vivendadacrianca
 
-
-LINKS GITHUB membros:
-https://github.com/Matheus-sen
-https://github.com/antonio87979
-https://github.com/lucascnd2561
