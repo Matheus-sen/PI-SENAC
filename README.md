@@ -11,8 +11,10 @@ Lembre-se, o projeto trata-se de um sistema versátil de controle/ gestão de es
 
 Membros do Grupo:
 Matheus de Souza Matos - https://github.com/Matheus-sen
+
 Antonio Romeu Miguel dos Santos Neto - https://github.com/antonio87979
 Lucas da Silva Camilo - https://github.com/lucascnd2561
+
 
 Turma Senac - N01 - Senac Largo Treze
 
