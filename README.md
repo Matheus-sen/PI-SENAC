@@ -10,6 +10,7 @@ Para entendermos melhor sobre como abrir e rodar o sistema, **segue o passo-a-pa
 Lembre-se, o projeto trata-se de um sistema versátil de controle/ gestão de estoque, use-o de acordo a sua necessidade...
 
 **Membros do Grupo:**
+
 Matheus de Souza Matos - https://github.com/Matheus-sen
 
 Antonio Romeu Miguel dos Santos Neto - https://github.com/antonio87979
