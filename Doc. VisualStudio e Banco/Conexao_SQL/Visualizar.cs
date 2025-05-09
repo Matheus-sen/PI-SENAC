@@ -24,7 +24,7 @@ namespace Conexao_SQL
         {
             InitializeComponent();
             string usuarioLogado = tipoUsuario;
-            if (usuarioLogado == "Simples") 
+            if (usuarioLogado == "Simples")
             {
                 lblVerificacao.Text = usuarioLogado.ToUpper();
                 lblVerificacao.ForeColor = Color.Green;
@@ -44,7 +44,7 @@ namespace Conexao_SQL
             lstVisualizar.Columns.Add("Un.Medida", 65, HorizontalAlignment.Left);
             lstVisualizar.Columns.Add("Localização", 200, HorizontalAlignment.Left);
             lstVisualizar.Columns.Add("Descrição", 450, HorizontalAlignment.Left);
-            carregar_contatos();
+            carregar_produtos();
             CarregarCategoriasNoComboBox();
 
             if (usuarioLogado == "Simples")
@@ -54,7 +54,7 @@ namespace Conexao_SQL
                 btnSair.Location = new System.Drawing.Point(27, 380);
 
             }
-            else 
+            else
             {
                 btnExcluir.Visible = true;
                 btnAtualizar.Visible = true;
@@ -62,6 +62,7 @@ namespace Conexao_SQL
         }
         private void Limpar()
         {
+            txtIdProduto.Clear();
             txtNomeProduto.Clear();
             cbxCategoriaProduto.SelectedIndex = -1;
             txtValor.Clear();
@@ -80,7 +81,7 @@ namespace Conexao_SQL
             MessageBox.Show(mensagem, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void carregar_contatos()
+        private void carregar_produtos()
         {
             try
             {
@@ -91,7 +92,7 @@ namespace Conexao_SQL
                 string info = "SELECT p.id_produto, p.nome_produto, c.nome_categoria, p.valor, p.unidade_controle, p.localizacao, p.descricao " +
                               "FROM produto p " +
                               "INNER JOIN categoria c ON p.id_categoria = c.id_categoria";
-                            
+
                 Conexao.Open();
 
                 // Buscar as informações
@@ -183,7 +184,7 @@ namespace Conexao_SQL
                                 );
 
 
-                        carregar_contatos();
+                        carregar_produtos();
 
                     }
                 }
@@ -208,7 +209,7 @@ namespace Conexao_SQL
             {
                 Erro($"Nenhum item/ produto foi selecionado, selecione um item para excluir!");
             }
-            
+
         }
 
         public void CarregarCategoriasNoComboBox()
@@ -326,7 +327,7 @@ namespace Conexao_SQL
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
 
-                    carregar_contatos();
+                    carregar_produtos();
                     Limpar();
                 }
                 else
@@ -335,7 +336,7 @@ namespace Conexao_SQL
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                
+
             }
             catch (Exception ex)
             {
@@ -396,6 +397,7 @@ namespace Conexao_SQL
                         var linha_list_view = new ListViewItem(row);
                         lstVisualizar.Items.Add(linha_list_view);
                     }
+                    Limpar();
                 }
             }
             catch (Exception ex)
@@ -407,5 +409,6 @@ namespace Conexao_SQL
                 Conexao.Close();
             }
         }
+
     }
 }
