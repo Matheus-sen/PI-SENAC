@@ -37,8 +37,6 @@ namespace Conexao_SQL
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //Login loginForm = new Login();
-            //loginForm.ShowDialog();
             this.Close();
         }
 

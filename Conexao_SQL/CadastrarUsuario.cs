@@ -99,8 +99,6 @@ namespace Conexao_SQL
             prodcmd.Connection = Conexao;
 
 
-
-
             if (string.IsNullOrEmpty(txtUserNovo.Text) || string.IsNullOrEmpty(txtSenhaNova.Text) || string.IsNullOrEmpty(cbxTipoUsuario.Text))
             {
                 Erro("Não pode conter campos vazios!");
@@ -134,6 +132,7 @@ namespace Conexao_SQL
             Conexao = new MySqlConnection(data_source);
             try
             {
+                //Criando a validação pra retornar apenas se houver ao menos UM usuário Administrador:
                 Conexao.Open();
                 string verificarAdmin = "SELECT COUNT(*) FROM login WHERE tipo_usuario = 'Administrador'";
                 MySqlCommand verificarCmd = new MySqlCommand(verificarAdmin, Conexao);
@@ -163,8 +162,6 @@ namespace Conexao_SQL
         {
             try
             {
-
-                // Criar a conexão com o MySQL
                 Conexao = new MySqlConnection(data_source);
 
                 string dadosUsuario = "SELECT id_usuario, user, tipo_usuario " +
@@ -196,7 +193,6 @@ namespace Conexao_SQL
                     lstUsuario.Items.Add(linha_list_view);
                 }
 
-
             }
             catch (Exception ex)
             {
@@ -215,13 +211,13 @@ namespace Conexao_SQL
 
                 if (id_usuario_selecionado == 1)
                 {
-                    Erro("O usuário 'admin' não pode ser excluído!");
-                    return; // Impede a exclusão
+                    Erro("O usuário 'admin' do tipo 'Padrão' não pode ser excluído!");
+                    return; // Impede a exclusão do admin
                 }
                 try
                 {
 
-                    DialogResult conf = MessageBox.Show("Deseja Excluir o Registro de ID " + id_usuario_selecionado + " ?",
+                    DialogResult conf = MessageBox.Show("Deseja Excluir o Usuário de Registro de ID " + id_usuario_selecionado + " ?",
                                                         "Certeza ?",
                                                            MessageBoxButtons.YesNo,
                                                            MessageBoxIcon.Warning);
@@ -241,13 +237,11 @@ namespace Conexao_SQL
 
                         cmd.ExecuteNonQuery();
 
-
                         MessageBox.Show(
-                                "Produto Excluido com Sucesso!",
+                                "Usuário Excluido com Sucesso!",
                                 "Sucesso", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information
                                 );
-
 
                         carregar_usuario();
 

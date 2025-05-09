@@ -115,9 +115,9 @@
             this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(103, 320);
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(28, 320);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
-            this.btnCadastrarUsuario.Size = new System.Drawing.Size(118, 32);
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(193, 32);
             this.btnCadastrarUsuario.TabIndex = 3;
             this.btnCadastrarUsuario.Text = "Cadastrar Usuário";
             this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
@@ -150,10 +150,10 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVoltar.Location = new System.Drawing.Point(27, 358);
+            this.btnVoltar.Location = new System.Drawing.Point(28, 355);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(194, 32);
-            this.btnVoltar.TabIndex = 4;
+            this.btnVoltar.Size = new System.Drawing.Size(95, 32);
+            this.btnVoltar.TabIndex = 5;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -184,10 +184,10 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(27, 320);
+            this.btnExcluir.Location = new System.Drawing.Point(129, 355);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(70, 32);
-            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Size = new System.Drawing.Size(92, 32);
+            this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -195,7 +195,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(293, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(318, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(98, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +208,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(284, 137);
+            this.label8.Location = new System.Drawing.Point(319, 143);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 29);
@@ -220,7 +220,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(272, 109);
+            this.label9.Location = new System.Drawing.Point(298, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 32);
             this.label9.TabIndex = 11;
@@ -229,9 +229,9 @@
             // lstUsuario
             // 
             this.lstUsuario.HideSelection = false;
-            this.lstUsuario.Location = new System.Drawing.Point(261, 190);
+            this.lstUsuario.Location = new System.Drawing.Point(284, 212);
             this.lstUsuario.Name = "lstUsuario";
-            this.lstUsuario.Size = new System.Drawing.Size(166, 185);
+            this.lstUsuario.Size = new System.Drawing.Size(166, 167);
             this.lstUsuario.TabIndex = 14;
             this.lstUsuario.UseCompatibleStateImageBehavior = false;
             this.lstUsuario.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -239,10 +239,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(262, 175);
+            this.label1.Location = new System.Drawing.Point(285, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 15);
             this.label1.TabIndex = 15;
@@ -253,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(73)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(434, 384);
+            this.ClientSize = new System.Drawing.Size(482, 384);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstUsuario);
             this.Controls.Add(this.pictureBox1);

@@ -31,62 +31,7 @@ namespace Conexao_SQL
             txtSenha.Clear();
         }
 
-        private void txtUser_Enter(object sender, EventArgs e)
-        {
 
-            //if (txtUser.Text == "User/Login...")
-            //{
-            //    txtUser.Text = "";
-            //    txtUser.ForeColor = Color.Black;
-            //}
-
-        }
-
-        private void txtUser_Leave(object sender, EventArgs e)
-        {
-
-            //if (txtUser.Text == "")
-            //{
-            //    txtUser.Text = "User/Login...";
-            //    txtUser.ForeColor = Color.Gray;
-            //}
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-            //txtUser.Text = "User/Login...";
-            //txtUser.ForeColor = Color.Gray;
-
-            //txtSenha.Text = "Senha...";
-            //txtSenha.ForeColor = Color.Gray;
-
-
-
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-            //if (txtSenha.Text == "Senha...")
-            //{
-            //    txtSenha.Text = "";
-            //    txtSenha.ForeColor = Color.Black;
-            //    txtSenha.PasswordChar = '*';
-
-            //}
-        }
-
-        private void txtSenha_Leave(object sender, EventArgs e)
-        {
-            //if (txtSenha.Text == "")
-            //{
-            //    txtSenha.Text = "Senha...";
-            //    txtSenha.ForeColor = Color.Gray;
-            //}
-        }
-
- 
         private void UsuarioPadrao()
         {
             Conexao = new MySqlConnection(data_source);
@@ -104,13 +49,13 @@ namespace Conexao_SQL
                     string inserirUsuarioPadrao = "INSERT INTO login (user, senha, tipo_usuario) VALUES ('admin', 'admin', 'Padrão')";
                     MySqlCommand insertcmd = new MySqlCommand(inserirUsuarioPadrao, Conexao);
                     insertcmd.ExecuteNonQuery();
-                    MessageBox.Show("Usuário administrador padrão criado com sucesso!", "Primeiro Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuário do tipo 'Padrão' criado com sucesso!", "Primeiro Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     txtUser.Text = "admin";
-                    txtUser.ForeColor = Color.Black; // Opcional: ajustar a cor do texto
+                    txtUser.ForeColor = Color.Black; // A justar a cor do texto
                     txtSenha.Text = "admin";
-                    txtSenha.ForeColor = Color.Black; // Opcional: ajustar a cor do texto
-                    txtSenha.PasswordChar = '*'; // Opcional: mostrar a senha como asteriscos
+                    txtSenha.ForeColor = Color.Black; // Ajustar a cor do texto
+                    txtSenha.PasswordChar = '*'; //Mostrar a senha como asteriscos
 
                 }
             }
@@ -191,15 +136,6 @@ namespace Conexao_SQL
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }
-
-
-//1° - Precisa fazer o cadastro do usuário padrão e verificar se ele já existe;
-
-//2º - Precisa fazer o método para quando iniciar o form outra vez, ele logar com ou o mesmo admin ou com o novo usuário e tipo cadastrado, fazendo com o que inicie o form visualizar caso seja simples e menu em diante caso seja administrador;

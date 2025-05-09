@@ -65,8 +65,6 @@
             this.txtUser.Size = new System.Drawing.Size(176, 20);
             this.txtUser.TabIndex = 0;
             this.txtUser.Tag = "";
-            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
-            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // txtSenha
             // 
@@ -77,8 +75,6 @@
             this.txtSenha.Size = new System.Drawing.Size(176, 20);
             this.txtSenha.TabIndex = 1;
             this.txtSenha.Tag = "";
-            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
-            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
             // label1
             // 
@@ -128,7 +124,6 @@
             this.lblUserLogin.Size = new System.Drawing.Size(81, 12);
             this.lblUserLogin.TabIndex = 3;
             this.lblUserLogin.Text = "USER/LOGIN *";
-            this.lblUserLogin.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
@@ -170,7 +165,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.gbxColor.ResumeLayout(false);
             this.gbxColor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
